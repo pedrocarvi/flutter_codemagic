@@ -37,7 +37,12 @@ class MyApp extends StatelessWidget {
         appBar:
             AppBar(title: const Text('Probando Codemagic'), centerTitle: true),
         body:
-            Center(child: Text(dotenv.get('TEXTO', fallback: 'No encontrado'))),
+            Center(child: Column(
+              children: [
+                Text(dotenv.get('TEXTO', fallback: 'No encontrado')),
+                Text("Nueva feature")
+              ],
+            )),
       ),
     );
   }
